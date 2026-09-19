@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: #293264;
+    background-color: #F5F7FB;
+    height: 100vh;
+    justify-content: center;
+    background-image: url(./images/blob1.png), url(./images/blob2.png);
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom left, top right;
+}
+
+
+main {
+   height: 100%;
+   gap: 10px;
+}
+
+body, 
+main {
+    flex-direction: column;
+}
+
+body, 
+main, 
+section.check-btn-container {
+    display: flex;
+    align-items: center;
+}
+
+main.start-container {
+    text-align: center;
+}
+
+main.quiz-container {
+   max-width: 400px;
+}
+
+section.check-btn-container {
+    gap: 15px; 
+}
+ 
+section > h1 {
+   margin-bottom: 2px; 
+   font-size: 1.953rem;
+}
+
+
+section > h1,
+section.check-btn-container > p,
+main > section.trivia {
+   font-family: "Karla", sans-serif;  
+}
+
+
+main > section.trivia, 
+main > p {
+    font-size: 1rem;
+}
+section.check-btn-container > p {
+     font-size: 0.8rem; 
+}
+
+section.check-btn-container > p, 
+main > section.trivia  {
+    font-weight: 700;
+}
+
+main > p, 
+section.check-btn-container > p, 
+button.trivia-btn,
+section > button.check-btn,
+section > button.start-btn {
+     font-family: "inter", sans-serif;
+}
+
+button.trivia-btn {
+    color: #293264; 
+    font-size: 0.64rem;
+    background-color: #F5F7FB;
+    margin: 5px 10px; 
+    padding: 5px 10px; 
+    border: 1px solid #4D5B9E;
+    border-radius: 8px;
+}
+
+/* conditonally render background colors with clsx */
+
+.trivia-btn.selected {
+    background-color: #D6DBF5;
+    border-color: #D6DBF5;
+}
+
+.trivia-btn.correct {
+    background-color: #94D7A2;
+    border-color: #94D7A2;
+}
+
+.trivia-btn.incorrect {
+    background-color: #F8BCBC;
+    border-color: #F8BCBC;
+}
+
+.trivia-btn.inValid, 
+.trivia-btn.incorrect {
+    opacity: 0.4; /* Makes the incorrect and the invalid answers 40% opaque after user clicks check answer button  */
+}
+
+
+section > button.check-btn,
+section > button.start-btn  {
+      background-color: #4D5B9E;
+      color: #F5F7FB; 
+      border: none;
+}
+
+
+
+section > button.start-btn {
+    font-weight: 500;
+    border-radius: 15px;
+    padding: 15px 50px;
+    margin-top: 20px; 
+       
+}
+
+section > button.check-btn {
+      font-size: 0.64rem;
+      font-weight: 400; 
+      border-radius: 10px;
+      width: 120px;
+      height: 35px; 
+}
+
+hr {
+   border-top: 1px solid #DBDEF0;
+   width: 400px; 
+}
+
+
+
